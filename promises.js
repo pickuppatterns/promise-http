@@ -10,11 +10,14 @@ fs.writeFile('test.txt', 'thiswrotetoyourfile', { encoding: 'utf-8' })
   .then(()=> console.log('WRITE FILE DONE!'))
   .catch(err => console.error(err));
 
-//COPY
+//COPY 
 fs.readFile('./.travis.yml', { encoding: 'utf-8' })
   .then(data => fs.writeFile('./.travis-copy.yml', data, { encoding: 'utf-8' }))
   .then(()=> console.log('COPY FILE DONE!'))
   .catch(err => console.error(err));
+
+//COPY 
+
 
 
 //Promise States:
