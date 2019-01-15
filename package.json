@@ -2,11 +2,11 @@
   "name": "simple-database",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "start": "node index.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -23,9 +23,11 @@
     "eslint": "^5.12.0",
     "jest": "^23.6.0",
     "mkdirp": "^0.5.1",
+    "nodemon": "^1.18.9",
     "rimraf": "^2.6.3"
   },
   "dependencies": {
-    "shortid": "^2.2.14"
+    "shortid": "^2.2.14",
+    "superagent": "^4.1.0"
   }
 }

@@ -1,7 +1,7 @@
 const transformer = require('./transformer');
 
 
-describe('transformer', () => {
+describe.skip('transformer', () => {
   it('transforms txt a file', () => {
     return transformer('./transform.txt')
       .then(transTxt => {

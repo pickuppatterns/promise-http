@@ -21,9 +21,6 @@ const transformer = src => {
     .then(reverse)
     .then(trim);
 };
-
-
-
 module.exports = { 
   transformer, 
   removeCapitals,
