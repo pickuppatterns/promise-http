@@ -1,4 +1,7 @@
-const transformer = require('./transformer');
+const {
+  transformer,
+  removeCapitals,
+} = require('./transformer');
 
 
 describe.skip('transformer', () => {
@@ -8,7 +11,10 @@ describe.skip('transformer', () => {
         expect().toEqual();
         expect().toEqual();
         expect().toEqual();
-        expect(transTxt).toEqual('i here');
+        expect(transTxt).toEqual('EREH I');
       });
+  });
+  it('removes capital letters', () => {
+    expect(removeCapitals('Hi There')).toEqual('i here');
   });
 });

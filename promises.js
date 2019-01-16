@@ -16,8 +16,16 @@ fs.readFile('./.travis.yml', { encoding: 'utf-8' })
   .then(()=> console.log('COPY FILE DONE!'))
   .catch(err => console.error(err));
 
-//COPY 
-
+//OLD SCHOOL
+const readPromise = src => new Promise((resolve, reject) => {
+  //read our file the old skool way
+  fs.readFile(src, { encoding: 'utf8' }, (err, data) => {
+    if(err) return reject(err);
+    resolve(data);
+  });
+});
+readPromise('./.travis.yml')
+  .then(data => console.log(data));
 
 
 //Promise States:
