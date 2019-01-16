@@ -16,7 +16,7 @@ describe('copy', () => {
           fsPromises.readFile('./.travis-copy.yml')
         ]);
       })
-      .then([travisYml, travisCopyYml] => {
+      .then(([travisYml, travisCopyYml]) => {
         //expect travisYml to equal travisCopyYml
         expect(travisYml).toEqual(travisCopyYml);
       })
