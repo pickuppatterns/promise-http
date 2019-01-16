@@ -31,9 +31,14 @@ describe('rick & morty service', () => {
   it('has the correct properties', () => {
     return getCharacters()
       .then(characters => {
-        expect(characters).toHaveProperty('name');
-        expect(characters).toHaveProperty('status');
-        expect(characters).toHaveProperty('species');
+        expect(characters[11]).toHaveProperty('name');
+        expect(characters[0]).toHaveProperty('status');
+        expect(characters[7]).toHaveProperty('species');
+        expect(characters[19]).not.toHaveProperty('type');
+        expect(characters[2]).not.toHaveProperty('gender');
+        expect(characters[10]).not.toHaveProperty('location');
+        expect(Object.keys(characters[0])).toHaveLength(3);
+        
       });
   });
 });
