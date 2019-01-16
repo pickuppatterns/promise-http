@@ -1,23 +1,17 @@
 const request = require('supertest');
 const app = require('../lib/app');
-//json app
-// describe('app', () => {
-//   it('has a testing route', () => {
-//     return request(app)
-//       .get('/tester')
-//       .then(res => {
-//         expect(res.body).toEqual({testing:123});
-//       });
-//   });
-// });
-//query app
+
 describe('app', () => {
   it('has a testing route', () => {
     return request(app)
-      .post('/note')
-      .send({ text: 'Im a note' })
+      .get('/character/1')
       .then(res => {
-        expect(res.status).toEqual(204);
+        expect(res.body).toEqual({
+          name:'Rick Sanchez',
+          species:'Human',
+          status: 'Alive'
+        });
       });
   });
+  
 });
