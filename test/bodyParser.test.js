@@ -1,4 +1,6 @@
 const bodyParser = require('../lib/bodyPrser');
+const EventEmitter = require('events');
+
 
 describe('bodyParser', ()=> {
   it('parses a requests body', () => {
