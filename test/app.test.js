@@ -14,10 +14,10 @@ const app = require('../lib/app');
 describe('app', () => {
   it('has a testing route', () => {
     return request(app)
-      .get(`/you?name=ryan`)
-      .query({ name: 'ryan'})
+      .post('/note')
+      .send({ text: 'Im a note' })
       .then(res => {
-        expect(res.body).toEqual({ hi: `there ryan});
+        expect(res.status).toEqual(204);
       });
   });
 });
