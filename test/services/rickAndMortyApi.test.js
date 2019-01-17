@@ -1,4 +1,5 @@
-const { getCharacter, getCharacters } = require('../../lib/services/rickAndMortyApi');
+const { getCharacter, 
+  getCharacters } = require('../../lib/services/rickAndMortyApi');
 
 // jest.mock('../lib/services/rickAndMortyApi.js', () => ({
 //   getCharacter() {
@@ -41,4 +42,9 @@ describe('rick & morty service', () => {
         
       });
   });
+
+  it('posts a note to the post object', () => {
+    
+  });
+
 });
