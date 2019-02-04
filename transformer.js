@@ -22,7 +22,7 @@ const transformer = src => {
     .then(data => removeCapitals(data))
     .then(data => toUpperCase(data))
     .then(data => reverse(data))
-    .then(data => trim(data))
+    .then(data => trim(data));
 };
 module.exports = { 
   transformer, 
