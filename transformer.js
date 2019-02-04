@@ -1,6 +1,6 @@
 const fs = require('fs').promises;
 
-const read = src => fs.Promises.readFile(src, { encoding: 'utf8' });
+// const read = src => fs.Promises.readFile(src, { encoding: 'utf8' });
 
 
 const removeCapitals = str => {
@@ -18,12 +18,11 @@ const trim = str => str.trim();
 
 
 const transformer = src => {
-  // fs.readFile(src, { encoding : 'utf8' })
-  return read(src)
-    .then(removeCapitals)
-    .then(toUpperCase)
-    .then(reverse)
-    .then(trim);
+  return fs.readFile(src, { encoding : 'utf8' })
+    .then(data => removeCapitals(data))
+    .then(data => toUpperCase(data))
+    .then(data => reverse(data))
+    .then(data => trim(data))
 };
 module.exports = { 
   transformer, 
