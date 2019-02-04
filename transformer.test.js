@@ -2,6 +2,7 @@ const {
   transformer,
   removeCapitals,
   toUpperCase,
+  reverse
 } = require('./transformer');
 
 
@@ -17,5 +18,8 @@ describe('transformer', () => {
   });
   it('makes all capital letters', () => {
     expect(toUpperCase('i here')).toEqual('I HERE');
+  });
+  it('reverses letters', () => {
+    expect(reverse('I HERE')).toEqual('EREH I');
   });
 });
