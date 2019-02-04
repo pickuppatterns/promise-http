@@ -1,10 +1,12 @@
 const {
   transformer,
   removeCapitals,
+  toUpperCase,
+  reverse
 } = require('./transformer');
 
 
-describe.skip('transformer', () => {
+describe('transformer', () => {
   it('transforms txt a file', () => {
     return transformer('./transform.txt')
       .then(transTxt => {
@@ -16,5 +18,11 @@ describe.skip('transformer', () => {
   });
   it('removes capital letters', () => {
     expect(removeCapitals('Hi There')).toEqual('i here');
+  });
+  it('makes all capital letters', () => {
+    expect(toUpperCase('i here')).toEqual('I HERE');
+  });
+  it('reverses letters', () => {
+    expect(reverse('I HERE')).toEqual('EREH I');
   });
 });

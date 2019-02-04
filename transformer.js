@@ -1,6 +1,6 @@
 const fs = require('fs').promises;
 
-const read = src => fs.readFile(src, {encoding: 'utf8'});
+const read = src => fs.Promises.readFile(src, { encoding: 'utf8' });
 
 
 const removeCapitals = str => {
@@ -13,7 +13,7 @@ const removeCapitals = str => {
 };
 
 const toUpperCase = str => str.toUpperCase();
-const reverse = str => str.reverse().join('');
+const reverse = str => str.split('').reverse().join('');
 const trim = str => str.trim();
 
 

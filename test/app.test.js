@@ -14,14 +14,14 @@ describe('app', () => {
         });
       });
   });
-  // it('has a POST route for testing', () => {
-  //   return request(app)
-  //     .post('/character')
-  //     .send({ text: 'Im a note' })
-  //     .then(res => {
-  //       console.log('This is a response', res.body.text);
-  //       // expect(character).toBeTruthy()
+  it('has a POST route for testing', () => {
+    return request(app)
+      .post('/character')
+      .send({ text: 'Im a note' })
+      .then(res => {
+        console.log('This is a response', res.body.text);
+        expect(res.body).toBeTruthy();
 
-  //     });
-  // });
+      });
+  });
 });
